@@ -13,6 +13,7 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
@@ -45,14 +46,18 @@ class _SideMenuState extends State<SideMenu> {
               ],
             ),
           ),
-          DrawerTile(text: 'Booking Seat'),
-          DrawerTile(text: 'Reviews'),
-          DrawerTile(text: 'Settings'),
-          DrawerTile(text: 'Support'),
-          DrawerTile(text: 'Terms & Condition'),
-          DrawerTile(text: 'Sign Out'),
+          Column(
+            children: [
+              DrawerTile(text: 'Booking Seat'),
+              DrawerTile(text: 'Reviews'),
+              DrawerTile(text: 'Settings'),
+              DrawerTile(text: 'Support'),
+              DrawerTile(text: 'Terms & Condition'),
+              DrawerTile(text: 'Sign Out'),
+            ],
+          ),
           Container(
-            margin: EdgeInsets.only(top: 160.0, left: 10.0, right: 10.0),
+            margin: EdgeInsets.only(left: 10.0, top: 200.0, right: 10.0),
             padding: EdgeInsets.all(12.0),
             decoration: BoxDecoration(
               color: Colors.white10,

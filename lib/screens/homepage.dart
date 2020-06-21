@@ -9,7 +9,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  int person = 0;
+  int person = 1;
 
   String getPlural() {
     if (person < 2) {
@@ -54,6 +54,7 @@ class _HomepageState extends State<Homepage> {
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
               padding: EdgeInsets.all(20.0),
@@ -309,24 +310,28 @@ class _HomepageState extends State<Homepage> {
                       },
                     ),
                   ),
+                  SizedBox(height: 5.0),
+                  Text(
+                    'Capacity 10 People',
+                    style: TextStyle(
+                        color: Colors.black54, fontFamily: 'Raleway-SemiBold'),
+                  )
                 ],
               ),
             ),
-            SizedBox(height: 15.0),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 50.0),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: kGreencolor),
-                child: Text(
-                  'Book Your Seat',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18.0,
-                      fontFamily: 'Raleway-SemiBold',
-                      fontWeight: FontWeight.w600),
-                ),
+            SizedBox(height: 20.0),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 50.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  color: kGreencolor),
+              child: Text(
+                'Book Your Seat',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontFamily: 'Raleway-SemiBold',
+                    fontWeight: FontWeight.w600),
               ),
             ),
           ],
