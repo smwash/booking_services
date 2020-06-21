@@ -7,3 +7,4 @@ const kYellowcolor = Color(0xffF5C45B);
 const kImage1color = Color(0xffD6F5F0);
 const kImage2color = Color(0xffFFDED5);
 const kImage3color = Color(0xffE3EBFE);
+const kGreyColor = Color(0xffd6d7de);
